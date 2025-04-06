@@ -4,29 +4,64 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>X</title>
+    <title>Flow Field</title>
     <style>
         html,
         body {
             height: 100%;
+            margin: 0;
+            padding: 0;
+            background: white;
         }
 
         body {
-            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        #canvas-container {
+            display: flex;
+            align-items: center;
+        }
+
+        canvas {
+            display: block;
+            background: black;
+        }
+
+        #instructions {
+            margin-left: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            max-width: 300px;
+        }
     </style>
 </head>
 
-<body></body>
+<body>
+    <div id="canvas-container">
+        <div id="p5-container"></div>
+        <div id="instructions">
+            <p><strong>Controls:</strong></p>
+            <p>Right Click: Saves the current frame as a PNG image.</p>
+            <p>Left Click: Clears the canvas, creating a fresh background.</p>
+            <p>Middle Click: Resets the particle system, generating a new flow field.</p>
+            <p>Space Key: Creates a new flow field with new random variables.</p>
+            <p><strong>Mouse Position:</strong></p>
+            <p>X-axis: Controls the noise scale, affecting the randomness of particle movement.</p>
+            <p>Y-axis: Controls the noise strength, determining the intensity of the noise field.</p>
+        </div>
+    </div>
 
-<!-- import the javascript library file(s) -->
-<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js" crossorigin="anonymous"></script>
+    <!-- import the javascript library file(s) -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js" crossorigin="anonymous"></script>
 
-<!-- import the javascript sketch file -->
-<script src="./sketch.js"></script>
+    <!-- import the javascript sketch file -->
+    <script src="./BubbletoX.js"></script>
+</body>
 
 </html>

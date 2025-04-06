@@ -15,6 +15,7 @@ function setup() {
   colorMode(HSB, 360, 100, 100, 100, 100); // Set color mode to HSB
   textFont(robotoMono); // Set the font for text
   createCanvas(1920, 1080);
+  canvas.parent('p5-container'); // Attach the canvas to a specific HTML element
   noStroke();
   velocitySlider = createSlider(0.1, 10, 1, 0.1); 
   velocitySlider.position(10, 10);
